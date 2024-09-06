@@ -9,7 +9,7 @@ jobs:
         steps:
             - run: echo "Hola $GITHUB_ACTOR"
             - run: |
-                cat < EOF
+                cat << EOF
                     El sistema operativo de esta ejecución es: $RUNNER_OS
                     Quien hizo el commit fue: $GITHUB_ACTOR que tiene ID de Github: $GITHUB_ACTOR_ID
                     El ID del commit fue: $GITHUB_SHA
