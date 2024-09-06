@@ -9,8 +9,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                export MY_NAME=gonzalo
+                echo "MY_NAME=gonzalo" >> "$GITHUB_ENV"
                 echo "Hola $GITHUB_ACTOR"
+
+                cat $GITHUB_ENV
             - run: |
                 echo "name: $MY_NAME"
                 cat << EOF
