@@ -42,10 +42,13 @@ jobs:
                    EOF
                    )
       
-                   echo $CONTENT
+                   
                    echo "+++++++++++++"
                    BODY='{"title":"Un Issue desde ","body":"'"${CONTENT}"'","assignees":["gpincheiraa"],"labels":["bug"]}'
-        
+
+                   echo "$BODY"
+                   echo "+++++++++++++"
+                   
                    curl -L \
                       -X POST \
                       -H "Accept: application/vnd.github+json" \
