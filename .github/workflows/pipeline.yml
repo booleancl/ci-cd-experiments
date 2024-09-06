@@ -8,4 +8,17 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Hola $GITHUB_ACTOR"
-            - run: echo "Pipeline en contexto de $GITHUB_REF"
+            - run: |
+                cat < EOF
+                    El sistema operativo de esta ejecución es: $RUNNER_OS
+                    Quien hizo el commit fue: $GITHUB_ACTOR que tiene ID de Github: $GITHUB_ACTOR_ID
+                    El ID del commit fue: $GITHUB_SHA
+
+                    El repositorio GitHub relacionado a esta ejecución es : $GITHUB_REPOSITORY
+                    El dueño de este repositorio es $GITHUB_REPOSITORY_OWNER
+                    Estaba en la rama: $GITHUB_REF_NAME"
+
+                    El archivo donde se guardan las variables marcadas como Output para este Step es $GITHUB_OUTPUT
+
+
+                EOF
