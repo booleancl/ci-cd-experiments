@@ -36,7 +36,7 @@ jobs:
                 cat $GITHUB_OUTPUT
             -  name: "Create issue"
                run: |
-                   CONTENT=$(cat < EOF
+                   CONTENT=$(cat << EOF
                        # Este despliegue tuvo problemas
                        Hola! Se encontraron fallos en el despliegue debido a 👻
                    EOF)
