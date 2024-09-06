@@ -8,12 +8,14 @@ jobs:
     scripts-job:
         runs-on: ubuntu-latest
         steps:
-            - run: |
+            - name: "First Script"
+              run: |
                 echo "MY_NAME=gonzalo" >> "$GITHUB_ENV"
                 echo "Hola $GITHUB_ACTOR"
 
                 cat $GITHUB_ENV
-            - run: |
+            -  name: "Second Script"
+               run: |
                 echo "name: $MY_NAME"
                 cat << EOF
                     El sistema operativo de esta ejecución es: $RUNNER_OS
