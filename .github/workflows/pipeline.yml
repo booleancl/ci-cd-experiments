@@ -19,6 +19,7 @@ jobs:
                     Estaba en la rama: $GITHUB_REF_NAME"
 
                     El archivo donde se guardan las variables marcadas como Output para este Step es $GITHUB_OUTPUT
-
-
                 EOF
+
+                echo "Valores OUTPUT"
+                cat $GITHUB_OUTPUT
