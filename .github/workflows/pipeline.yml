@@ -1,0 +1,11 @@
+name: Pipeline
+on:
+    schedule:
+        - cron: "*/5 * * * *"
+    workflow_dispatch:
+jobs:
+    scripts-job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hola $GITHUB_ACTOR"
+            - run: echo "Pipeline en contexto de $GITHUB_REF"
