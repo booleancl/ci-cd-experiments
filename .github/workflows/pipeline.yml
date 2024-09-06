@@ -37,10 +37,11 @@ jobs:
             -  name: "Create issue"
                run: |
                    CONTENT=$(cat << EOF
-                       # Este despliegue tuvo problemas
-                       Hola! Se encontraron fallos en el despliegue debido a 👻
-                   EOF)
-                    
+                           # Este despliegue tuvo problemas
+                           Hola! Se encontraron fallos en el despliegue debido a 👻
+                   EOF
+                   )
+      
                    echo $CONTENT
                    echo "+++++++++++++"
                    BODY='{"title":"Un Issue desde ","body":"'"${CONTENT}"'","assignees":["gpincheiraa"],"labels":["bug"]}'
