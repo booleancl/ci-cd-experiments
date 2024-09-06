@@ -44,7 +44,7 @@ jobs:
       
                    
                    echo "+++++++++++++"
-                   BODY='{"title":"Un Issue desde ","body":"'"${CONTENT}"'","assignees":["gpincheiraa"],"labels":["bug"]}'
+                   BODY='{"title":"Un Issue desde ","body":"'$CONTENT'","assignees":["gpincheiraa"],"labels":["bug"]}'
 
                    echo "$BODY"
                    echo "+++++++++++++"
