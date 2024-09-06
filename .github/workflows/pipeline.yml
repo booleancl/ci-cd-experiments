@@ -21,5 +21,8 @@ jobs:
                     El archivo donde se guardan las variables marcadas como Output para este Step es $GITHUB_OUTPUT
                 EOF
 
+                echo "Creando un OUTPUT"
+                echo "MY_URL=https://boolean.cl" >> $GITHUB_OUTPUT
+                echo "+++++++++++++++++++++++"    
                 echo "Valores OUTPUT"
                 cat $GITHUB_OUTPUT
