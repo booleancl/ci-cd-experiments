@@ -8,8 +8,11 @@ jobs:
     scripts-job:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Hola $GITHUB_ACTOR"
             - run: |
+                export MY_NAME=gonzalo
+                echo "Hola $GITHUB_ACTOR"
+            - run: |
+                echo "name: $MY_NAME"
                 cat << EOF
                     El sistema operativo de esta ejecución es: $RUNNER_OS
                     Quien hizo el commit fue: $GITHUB_ACTOR que tiene ID de Github: $GITHUB_ACTOR_ID
